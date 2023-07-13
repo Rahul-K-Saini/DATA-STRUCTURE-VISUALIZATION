@@ -1,0 +1,70 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+main {
+
+    height: 100vh;
+    width: 100vw;
+}
+
+main {
+    display: flex;
+}
+
+nav {
+    padding: .8em 1.8em;
+}
+
+
+input,
+button {
+    padding: 10px;
+    width: 70%;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    border-radius: 3px;
+    // display: block;
+    border: none;
+}
+
+h3{
+    font-size: 2rem;
+    text-align: center;
+    margin-top: .5em;
+}
+
+/*Input section */
+#inputSection {
+    width: 30%;
+    background-color: #f1f1f1;
+
+    .input_div {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        /* border: 1px solid red; */
+        margin: 5em 1em;
+    }
+
+    button {
+        width: 50%;
+        background-color: #56a4e4;
+        color: white;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #308adf;
+        }
+    }
+}
+
+#treeSection {
+    flex: 1;
+    background-color: #e1e1e1;
+}

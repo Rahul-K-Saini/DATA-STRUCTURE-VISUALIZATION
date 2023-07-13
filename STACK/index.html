@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="nav_container">
+        <nav>
+            <img src="./stk.png" alt="stack_logo">
+            <h1>Stack Visualization</h1>
+        </nav>
+    </header>
+    <main id="container">
+        <section id="inputSection">
+            <div class="input_div">
+                <label for="input_no">Enter here:</label>
+                <input id="input_no" type="text">
+                <button id="btn" onclick="push()">Push</button>
+                <button id="btn" onclick="pop()">Pop</button>
+            </div>
+        </section>
+        <section id="stackSection">
+            <h3>Stack</h3>
+            <p style="display: inline;">Top:  </p><span id="top_pointer"></span>
+            <div id="stack_cont">
+
+            </div>
+        </section>
+    </main>
+</body>
+<script src="./stack.js"></script>
+</html>
