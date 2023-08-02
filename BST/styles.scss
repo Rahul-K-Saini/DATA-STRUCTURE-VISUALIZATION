@@ -11,26 +11,85 @@ main {
 
     height: 100vh;
     width: 100vw;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    // font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
 }
 
 main {
     display: flex;
 }
-
+h1{
+    display: inline;
+}
 nav {
-    padding: .8em 1.8em;
+    background-color: rgba(58, 104, 204, 0.8);
+    color: white;
+    padding: 0.4em 1.5em;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 10px;
+    img{
+        display: inline;
+        width: 50px;
+        height: 50px;
+    }
+}
+.node{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid black;
+    text-align: center;
+    padding: .5em;
+    font-size: 1.18rem;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -25px;
+        height: 30px;
+        width: 1px;
+        background-color: black;
+    }
+    &::before {
+        left: 5px;
+        transform: rotate(45deg);
+    }
+    
+    &::after {
+        right: 5px;
+        transform: rotate(-45deg);
+    }
+    &:hover{
+        background-color: #308adf;
+        border-width: 1px;
+        transform: scale(1.15);
+        box-shadow: 0px 0px 6px 0px black;
+        transition: transform .1s ease-out;
+    }
 }
 
+input:focus{
+    outline: 1px solid grey;
+    &::placeholder {
+        color: transparent;
+    }
+}
 
 input,
 button {
     padding: 10px;
-    width: 70%;
     font-family: Arial, sans-serif;
     font-size: 16px;
     border-radius: 3px;
-    // display: block;
     border: none;
+    min-width: 80px;
+    max-width: 400px;
+    font-style: inherit;
 }
 
 h3{
@@ -39,32 +98,84 @@ h3{
     margin-top: .5em;
 }
 
+.intro{
+    padding: .5em .7em;
+    p{
+        line-height: 1.5;
+        letter-spacing: 2px;
+        color: rgb(247, 103, 51);
+        font-size: 2.3rem;
+        font-family: "Pacifico";
+    }
+}
+
 /*Input section */
 #inputSection {
     width: 30%;
     background-color: #f1f1f1;
-
     .input_div {
         display: flex;
         flex-direction: column;
         gap: 1.2rem;
-        /* border: 1px solid red; */
-        margin: 5em 1em;
+        margin: 2em 1em;
     }
-
-    button {
-        width: 50%;
+    #btn {
+        width: 40%;
         background-color: #56a4e4;
         color: white;
         cursor: pointer;
-
         &:hover {
             background-color: #308adf;
         }
     }
+    .traversal_btn{
+        cursor: pointer;
+        display: inline-block;
+        width: 25%;
+        background-color: #56a4e4;
+        color: white;
+        &:not(:first-of-type){
+            margin-left: .6em;
+        }
+        &:hover{
+            background-color: #308adf;
+        }
+    }
+    
 }
 
 #treeSection {
     flex: 1;
     background-color: #e1e1e1;
+}
+
+#tree_cont{
+    position: relative;
+}
+
+.traversals{
+    font-size: 1.2rem;
+
+}
+
+/* Error Message */
+
+.alert{
+    font-size: 1.15rem;
+    display: none;
+    background-color: rgba(255, 0, 0, 0.2);
+    p{
+        color: rgb(255, 0, 0);
+        width: 92%;
+        text-align: center;
+    }
+    button{
+        padding: 5px;
+        cursor: pointer;
+        border-radius:50% ;
+        background-color: transparent;
+        &:hover{
+            transform: scale(.85);
+        }
+    }
 }
