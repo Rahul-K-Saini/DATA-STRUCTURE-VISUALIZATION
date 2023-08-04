@@ -26,13 +26,14 @@ p {
 }
 
 header {
-  padding: 0.8em 1.2em;
+  padding: 0.5em 1em;
   background-color: rgba(58, 104, 204, 0.8);
 }
 header nav {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  margin-left: 1rem;
 }
 header nav img {
   display: inline;
@@ -89,7 +90,7 @@ header nav img {
 }
 #container #inputSection .input_div button:hover {
   color: #ffffff;
-  background-color: #1ec046;
+  background-color: #56a4e4;
   transition: cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
 }
 #container #stackSection {
@@ -121,7 +122,7 @@ header nav img {
 #container #stackSection #stack_cont .node_cont .node {
   font-family: Arial, sans-serif;
   background-color: #56a4e4;
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 1.1rem;
   padding: 1em;
   text-align: center;
@@ -138,7 +139,7 @@ header nav img {
   background-color: rgba(255, 0, 0, 0.3);
 }
 .alert p {
-  color: rgb(255, 0, 0);
+  color: rgba(255, 0, 0, 0.9);
   width: 92%;
   text-align: center;
 }

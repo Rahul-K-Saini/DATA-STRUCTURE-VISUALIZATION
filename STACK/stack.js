@@ -6,7 +6,6 @@ top_pointer.textContent = -1;
 const stackContainer = document.getElementById('stack_cont');
 const errorContainer = document.getElementById('errorMsg')
 const errorText = document.getElementById('errMessage')
-
 // Push function of stack
 function push() {
   const input = document.getElementById('input_no');

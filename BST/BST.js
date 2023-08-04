@@ -140,6 +140,7 @@ function makeTree() {
     let values = input.value.trim();
     if (values.length == 0) {
         showError("Looks like you did not enter any number for BST Visualizer to display")
+        treeContainer.innerHTML = ''
     }
     else {
         let valuesArr = values.split(" ")

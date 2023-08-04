@@ -1,178 +1,188 @@
-$nav-bg-gradient1:linear-gradient(15deg, #d13696 0%, #61bbb0 100%);
-$nav-bg-gradient2:linear-gradient(15deg, #f87031 50%, #080100 80%);
-$border_radius:4px;
+$nav-bg-gradient1: linear-gradient(15deg, #d13696 0%, #61bbb0 100%);
+$nav-bg-gradient2: linear-gradient(15deg, #f87031 50%, #080100 80%);
+$border-radius: 4px;
+$primary-color: #56a4e4;
+$secondary-color: #f11811;
+$text-color: rgb(255, 255, 255);
+$container-background: rgba(0, 0, 0, .05);
+$alert-background: rgba(255, 0, 0, 0.3);
+$input-font-size: 1.2rem;
+
 *,
 *::before,
-*::after{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    width: 100vw;
-    height: 100vh;
-    font-family: 'Oswald', sans-serif;
-    overflow-y: hidden;
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Oswald', sans-serif;
+  overflow-y: hidden;
 }
 
-h1{
-    font-size: 2rem;
-    letter-spacing: .85px;
-    word-spacing: 2px;
-    font-weight: 900;
-    color: rgb(255,255,255);
+h1 {
+  font-size: 2rem;
+  letter-spacing: .85px;
+  word-spacing: 2px;
+  font-weight: 900;
+  color: $text-color;
 }
 
-p{
-    font-size: 1.4rem;
+p {
+  font-size: 1.4rem;
 }
 
 // Header Designing
-header{
-    padding: .8em 1.2em;
-    background-color: rgba(58, 104, 204, 0.8);
-    nav{
-        display: flex;
-        align-items: center;
-        gap:.8rem;
-        img{
-            display: inline;
-            height: 33px;
-            width: 35px;
-        }
+header {
+  padding: .5em 1em;
+  background-color: rgba(58, 104, 204, 0.8);
+  nav {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    margin-left: 1rem;
+    img {
+      display: inline;
+      height: 33px;
+      width: 35px;
     }
+  }
 }
 
 // Main Container styles
-#container{
-    display: flex;
+#container {
+  display: flex;
+  height: 100%;
+
+  // Input Section Inside Container
+  #inputSection {
+    width: 35%;
     height: 100%;
+    background-color: $container-background;
+    margin-right: 10px;
     
-    // Input Section Inside Container
-    #inputSection{
-        width: 35%;
-        height: 100%;
-        background-color: rgba(0,0,0,.05);
-        margin-right: 10px;
-        .intro{
-            padding: .5em 0;
-            padding-left: 1.6em;
-            p{
-                font-family: "Pacifico";
-                line-height: 1.5;
-                letter-spacing: 4px;
-                color: rgb(247, 103, 51);
-                font-size: 2.5rem;
-            }
-        }
-        .input_div{
-            margin: 2em 1.8em;
-            input{
-                padding: 3px 5px;
-                width: 150px;
-                outline: none;
-                font-size: 1.2rem;
-                display: block;
-                border: none;
-
-            }
-            button{
-                border: none;
-                border-radius: $border_radius;
-                font-size: .95rem;
-                cursor: pointer;
-                background-color: #ffffff;
-                margin-top: 8px;
-                padding: .5rem 1.2rem;
-                &:last-of-type{
-                    margin-left: 6px;
-                    &:hover{
-                        background-color: #f11811;
-                    }
-                }
-                &:hover{
-                    color: #ffffff;
-                    background-color: #1ec046;
-                    transition: cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
-
-                }
-            }
+    // intro styles
+    .intro{
+        padding: .5em 0;
+        padding-left: 1.6em;
+        p{
+            font-family: "Pacifico";
+            line-height: 1.5;
+            letter-spacing: 4px;
+            color: rgb(247, 103, 51);
+            font-size: 2.5rem;
         }
     }
 
-    // Stack Section Inside Container
-    #stackSection{
-        flex:1;
-        width: 65%;
-        h3{
-            text-align: center;
-            letter-spacing: .8px;
-            font-size: 2rem;
-            margin-top: 8px;
+    .input_div {
+      margin: 2em 1.8em;
+      input {
+        padding: 3px 5px;
+        width: 150px;
+        outline: none;
+        font-size: $input-font-size;
+        display: block;
+        border: none;
+      }
+      button {
+        border: none;
+        border-radius: $border-radius;
+        font-size: .95rem;
+        cursor: pointer;
+        background-color: #ffffff;
+        margin-top: 8px;
+        padding: .5rem 1.2rem;
+
+        &:last-of-type {
+          margin-left: 6px;
+          &:hover {
+            background-color: $secondary-color;
+          }
         }
-        #top_pointer{
-            font-size: 1.3rem;
+        &:hover {
+          color: #ffffff;
+          background-color: $primary-color;
+          transition: cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
         }
-        #stack_cont{
-            .node_cont{
-                display: inline-flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                position: relative;
-                opacity: 0; 
-                animation: fadeIn 0.3s forwards;
-                p{
-                    display: inline;
-                    font-size: 1rem;
-                }
-                .node{
-                    font-family: Arial, sans-serif;
-                    background-color: #56a4e4;
-                    color: white;
-                    font-size: 1.1rem;
-                    padding: 1em;
-                    text-align: center;
-                    margin: 10px 0px; 
-                    display: inline;
-                    border: 1px solid black;
-                    box-shadow: 2px 2px 4px 0px rgba(0,0,0,0.8);
-                }
-            }
-            
-        }
+      }
     }
+  }
+
+  // Stack Section Inside Container
+  #stackSection {
+    flex: 1;
+    width: 65%;
+    h3 {
+      text-align: center;
+      letter-spacing: .8px;
+      font-size: 2rem;
+      margin-top: 8px;
+    }
+    #top_pointer {
+      font-size: 1.3rem;
+    }
+    #stack_cont {
+      .node_cont {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        opacity: 0;
+        animation: fadeIn 0.3s forwards;
+        p {
+          display: inline;
+          font-size: 1rem;
+        }
+        .node {
+          font-family: Arial, sans-serif;
+          background-color:$primary-color;
+          color: $text-color;
+          font-size: 1.1rem;
+          padding: 1em;
+          text-align: center;
+          margin: 10px 0px;
+          display: inline;
+          border: 1px solid black;
+          box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.8);
+        }
+      }
+
+    }
+  }
 }
 
-.alert{
-    padding: 2px 0;
-    font-size: 1.15rem;
-    display: none;
-    background-color: rgba(255, 0, 0, 0.3);
-    p{
-        color: rgb(255, 0, 0);
-        width: 92%;
-        text-align: center;
+.alert {
+  padding: 2px 0;
+  font-size: 1.15rem;
+  display: none;
+  background-color: $alert-background;
+  p {
+    color: rgba(255, 0, 0,.9);
+    width: 92%;
+    text-align: center;
+  }
+  button {
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    background-color: transparent;
+    &:hover {
+      transform: scale(.85);
     }
-    button{
-        border: none;
-        padding: 5px;
-        cursor: pointer;
-        background-color: transparent;
-        &:hover{
-            transform: scale(.85);
-        }
-    }
+  }
 }
 
 @keyframes fadeIn {
-    0% {
-      opacity: 0;
-      transform: translateX(20px); 
-    }
-    100% {
-      opacity: 1;
-      transform: translateX(0); 
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
   }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
