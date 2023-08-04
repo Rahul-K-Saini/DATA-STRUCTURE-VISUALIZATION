@@ -7,10 +7,9 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
   width: 100vw;
   height: 100vh;
-  font-family: "Lato", sans-serif;
+  font-family: "Oswald", sans-serif;
   overflow-y: hidden;
 }
 
@@ -27,8 +26,8 @@ p {
 }
 
 header {
-  background-color: rgba(58, 104, 204, 0.8);
   padding: 0.8em 1.2em;
+  background-color: rgba(58, 104, 204, 0.8);
 }
 header nav {
   display: flex;
@@ -51,8 +50,19 @@ header nav img {
   background-color: rgba(0, 0, 0, 0.05);
   margin-right: 10px;
 }
+#container #inputSection .intro {
+  padding: 0.5em 0;
+  padding-left: 1.6em;
+}
+#container #inputSection .intro p {
+  font-family: "Pacifico";
+  line-height: 1.5;
+  letter-spacing: 4px;
+  color: rgb(247, 103, 51);
+  font-size: 2.5rem;
+}
 #container #inputSection .input_div {
-  margin: 4em 1.8em;
+  margin: 2em 1.8em;
 }
 #container #inputSection .input_div input {
   padding: 3px 5px;
@@ -109,7 +119,9 @@ header nav img {
   font-size: 1rem;
 }
 #container #stackSection #stack_cont .node_cont .node {
-  background-color: rgb(255, 165, 0);
+  font-family: Arial, sans-serif;
+  background-color: #56a4e4;
+  color: white;
   font-size: 1.1rem;
   padding: 1em;
   text-align: center;
@@ -117,6 +129,27 @@ header nav img {
   display: inline;
   border: 1px solid black;
   box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.8);
+}
+
+.alert {
+  padding: 2px 0;
+  font-size: 1.15rem;
+  display: none;
+  background-color: rgba(255, 0, 0, 0.3);
+}
+.alert p {
+  color: rgb(255, 0, 0);
+  width: 92%;
+  text-align: center;
+}
+.alert button {
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  background-color: transparent;
+}
+.alert button:hover {
+  transform: scale(0.85);
 }
 
 @keyframes fadeIn {

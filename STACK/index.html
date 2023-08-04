@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Stack Visualization</title>
 </head>
 
 <body>
@@ -18,8 +19,16 @@
             <h1>Stack Visualization</h1>
         </nav>
     </header>
+    <div role="alert" id="errorMsg" class="alert">
+        <p id="errMessage"></p>
+        <button type="button" onclick="errorContainer.style.display = 'none'" class="close"><span aria-hidden="true">&#10060</span>
+        </button>
+    </div>
     <main id="container">
         <section id="inputSection">
+            <div class="intro">
+                <p>Stack</p>
+            </div>
             <div class="input_div">
                 <label for="input_no">Enter here:</label>
                 <input id="input_no" type="text">

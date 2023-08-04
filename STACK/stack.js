@@ -4,6 +4,8 @@
 let top_pointer = document.getElementById('top_pointer');
 top_pointer.textContent = -1;
 const stackContainer = document.getElementById('stack_cont');
+const errorContainer = document.getElementById('errorMsg')
+const errorText = document.getElementById('errMessage')
 
 // Push function of stack
 function push() {
@@ -11,7 +13,7 @@ function push() {
   const input_value = input.value.trim();
   
   if (input_value.length < 1) {
-    alert("Enter any value to push into the stack.");
+    showError("Enter any value to push into the stack.")
     return;
   }
   
@@ -41,11 +43,17 @@ function push() {
 // Pop function of stack
 function pop() {
   if (parseInt(top_pointer.textContent) === -1) {
-    alert("Stack is empty! Enter a value first.");
+    showError("Stack is empty! Can't Pop from empty Stack")
     return;
   }
   
   top_pointer.textContent--;
   const elementToRemove = stackContainer.lastElementChild;
   elementToRemove.remove();
+}
+
+// error handling function
+function showError(message) {
+  errorContainer.style.display = 'flex';
+  errorText.innerHTML = `<b>Enter value first! </b> ${message}`;
 }
